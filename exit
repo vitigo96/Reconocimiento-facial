@@ -1,0 +1,35 @@
+[33mcommit b9c51fc3768cae5547ee298adf2c5a2c0014f384[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: davichogafu <davichogafu@gmail.com>
+Date:   Sat Oct 19 15:13:05 2019 -0500
+
+    Elimine el archivo de funciones, y en el de BD agregue toda la captura de datos y de fotos
+
+[33mcommit 6833ea7370fa7dabdcc997a276f675bf89237974[m
+Author: davichogafu <davichogafu@gmail.com>
+Date:   Sat Oct 19 14:27:14 2019 -0500
+
+    modifique la base de datos para mejorarla y deje solo en funciones para que tomara las fotos sin seleccionar
+
+[33mcommit 6d83c6f5e8cc96304c1665584e373c029dfc402d[m
+Author: davichogafu <davichogafu@gmail.com>
+Date:   Tue Oct 1 19:09:16 2019 -0500
+
+    añadida base de datos
+
+[33mcommit 0dc1fb2fcb6165b8eaeab0e2b40492112c10decd[m
+Author: Elkin Flórez <elkin9705@gmail.com>
+Date:   Tue Sep 17 11:53:38 2019 -0500
+
+    Reconocimiento facial conFacenet
+
+[33mcommit bed9e6664777c76035123855521962e6e33efd4b[m
+Author: Elkin Flórez <elkin9705@gmail.com>
+Date:   Sat Jul 27 17:26:12 2019 -0500
+
+    borramos una carpeta que no servia
+
+[33mcommit 56048e7c0dca9ce9cf4ea7bd12c984ae9db5b873[m
+Author: Elkin Flórez <elkin9705@gmail.com>
+Date:   Sat Jul 27 17:23:53 2019 -0500
+
+    Initial commit
