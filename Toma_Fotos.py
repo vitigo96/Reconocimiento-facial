@@ -5,10 +5,12 @@ import os
 
 Nombre = input("Nombre del nuevo usuario: ")
 
-video = cv2.VideoCapture(0)
+video = cv2.VideoCapture(1)
 C = 0
 
-direccion = 'D:/DECIMO/PAE/GIT/face-recognition/train_img/' + Nombre
+# direccion = 'D:/DECIMO/PAE/GIT/face-recognitio' + Nombre
+direccion = '/home/elkin/Documents/Facenet/train_img/' + Nombre
+
 dir = os.mkdir(direccion)
 
 while True:
@@ -22,5 +24,5 @@ while True:
     time.sleep(0.1)
     C = C + 1
 
-    if C == 50:
+    if C == 20:
         break

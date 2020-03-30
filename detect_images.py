@@ -51,9 +51,7 @@ with tf.Graph().as_default():
         with open(classifier_filename_exp, 'rb') as infile:
             (model, class_names) = pickle.load(infile)
 
-        # video_capture = cv2.VideoCapture("akshay_mov.mp4")
         c = 0
-
 
         print('Start Recognition!')
         prevTime = 0
@@ -119,7 +117,7 @@ with tf.Graph().as_default():
                         feed_dict = {images_placeholder: scaled_reshape[i], phase_train_placeholder: False}
                         emb_array[0, :] = sess.run(embeddings, feed_dict=feed_dict)
                         predictions = model.predict_proba(emb_array)
-                        print(predictions)
+                        print("Esta es la preducción:", predictions)
                         best_class_indices = np.argmax(predictions, axis=1)
                         # print(best_class_indices)
                         best_class_probabilities = predictions[np.arange(len(best_class_indices)), best_class_indices]
@@ -130,10 +128,15 @@ with tf.Graph().as_default():
                         text_x = bb[i][0]
                         text_y = bb[i][3] + 20
                         print('Result Indices: ', best_class_indices[0])
-                        if best_class_indices ==0:
-                            y_pred.append('David')
+                        if best_class_probabilities > 0.8:
+                            if best_class_indices ==0:
+                                y_pred.append('David')
+                            else:
+                                y_pred.append('Elkin')
                         else:
-                            y_pred.append('Elkin')
+                            y_pred.append('Ninguno')
+                            
+                        
                         #y_pred= y_pred[:] + [best_class_indices[0]]
                         #y_pred= np.append(y_pred, int(best_class_indices[0]))
                         
@@ -156,7 +159,7 @@ with tf.Graph().as_default():
                 sys.exit("Thanks")
         print("el valor de y_true es:", y_true)
         print("el valor de y_pred es:", y_pred)
-        labels = ['David', 'Elkin']
+        labels = ['David', 'Elkin','Ninguno']
         cm = confusion_matrix(y_true,y_pred, labels)
         print("La matriz de confusión es:\n", cm)
         fig = plt.figure()
